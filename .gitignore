@@ -1,2 +1,20 @@
 # mac
 **/.DS_Store
+
+# docker
+**/.env
+
+# terraform
+**/.terraform/*
+**/.tfstate
+**/.tfstate.*
+**/**/crash.log
+**/crash.*.log
+**/.tfplan
+**/.terraformrc
+**/terraform.rc
+**/.terraform.lock.hcl
+
+# others
+**/*.bak
+**/*.tmp
