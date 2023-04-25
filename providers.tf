@@ -12,9 +12,9 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Project     = lower(var.project)
-      Environment = lower(var.environment)
-      Terraform   = "true"
+      project     = lower(var.project)
+      environment = lower(var.environment)
+      terraform   = "true"
     }
   }
 }
