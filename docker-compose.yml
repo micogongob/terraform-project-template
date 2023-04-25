@@ -1,7 +1,6 @@
 version: '3.9'
 
 services:
-  # TODO support nested tf dirs
   terraform:
     image: hashicorp/terraform:1.4.4
     container_name: terraform-project-template-terraform
