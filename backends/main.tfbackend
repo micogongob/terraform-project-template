@@ -1,5 +1,5 @@
 # NOTE: s3 and dynamodb should be created first
 # NOTE: dynamodb table should have the LockID primary key
-bucket         = "micogongob-terraform-state-us-east-1"
+bucket         = "terraform-project-template-state-us-east-1"
 region         = "us-east-1"
-dynamodb_table = "sandbox-terraform-state-lock"
+dynamodb_table = "terraform-project-template-state-lock"
