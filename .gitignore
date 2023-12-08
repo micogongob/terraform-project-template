@@ -10,7 +10,7 @@
 **/.tfstate.*
 **/**/crash.log
 **/crash.*.log
-**/.tfplan
+**/*.tfplan
 **/.terraformrc
 **/terraform.rc
 **/.terraform.lock.hcl
