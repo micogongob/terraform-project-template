@@ -12,9 +12,13 @@ init:
 validate:
 	$(TERRAFORM_RUN) validate
 
-deploy:
+plan:
 	$(TERRAFORM_RUN) plan
+
+apply:
 	$(TERRAFORM_RUN) apply output.tfplan
+
+deploy: plan apply
 
 format:
 	$(TERRAFORM_RUN) fmt -recursive
