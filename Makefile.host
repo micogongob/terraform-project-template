@@ -1,0 +1,22 @@
+TERRAFORM_RUN = terraform
+
+init:
+	TF_CLI_ARGS_init="-backend-config=backends/main.tfbackend" $(TERRAFORM_RUN) init
+
+validate:
+	$(TERRAFORM_RUN) validate
+
+plan:
+	TF_CLI_ARGS_plan="-out output.tfplan -var-file=vars/main.tfvars" $(TERRAFORM_RUN) plan
+
+apply:
+	$(TERRAFORM_RUN) apply output.tfplan
+
+deploy: plan apply
+
+format:
+	$(TERRAFORM_RUN) fmt -recursive
+fmt: format
+
+destroy:
+	TF_CLI_ARGS_destroy="-var-file=vars/main.tfvars" $(TERRAFORM_RUN) destroy
